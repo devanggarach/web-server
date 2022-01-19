@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
 const app = express();
+const port = process.env.PORT|3000;
 
 console.log(__dirname);
 // console.log(__filename);
@@ -75,6 +76,6 @@ app.get('*', (req,res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("conneted on port no. 3000")
+app.listen(port, () => {
+    console.log("server run's on port:",port)
 })
